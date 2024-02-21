@@ -1,0 +1,20 @@
+package Chapter9;
+
+public class StingCharForEach {
+
+	public static void main(String[] args) {
+		String n = "APPLE";
+
+	}
+	static class forRach {
+		static void ForEach22(Iterable<String> iterable){
+			for(String i : iterable) {
+				for(int n = 0; n < i.length(); n++) {
+					System.out.println((n));
+				}
+			}
+			
+		}
+	}
+
+}

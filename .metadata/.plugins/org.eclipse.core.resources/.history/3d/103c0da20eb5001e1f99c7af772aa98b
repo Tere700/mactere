@@ -1,0 +1,29 @@
+package Filexxxit;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
+public class Maydayvideo {
+
+	public static void main(String[] args) {
+		try {
+			FileInputStream fin = new FileInputStream("dir1/Mayday.MOV");
+			FileOutputStream fout = new FileOutputStream("dir2/Mayday.MOV");
+			
+			int data;
+			while(((data = fin.read())!=-1)) {
+				fout.write(data);
+			}
+		
+			
+			fout.flush();
+			fout.close();
+			fin.close();
+			System.out.println("Finish");
+		} catch (Exception e) {
+			System.out.println(e.toString());
+		}
+
+	}
+
+}

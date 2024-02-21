@@ -1,0 +1,11 @@
+package iii.brad.tw;
+
+public class test {
+
+	public static void main(String[] args) {
+		int money = -1;
+		assert money <=0 :"扣負數";
+
+	}
+
+}

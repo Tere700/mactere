@@ -1,0 +1,17 @@
+package Chapter8;
+
+import java.io.IOException;
+
+import Chapter4.cashCard;
+
+public class test {
+
+	public static void main(String[] args) throws IOException, InsufficientException1 {
+		CashCard2 c = new CashCard2("1", 500, 1);
+
+			c.charge(-200);
+			System.out.println(c.getBalance());
+
+	}
+
+}

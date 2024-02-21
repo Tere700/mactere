@@ -1,0 +1,17 @@
+package Chapter9;
+
+import java.util.Arrays;
+import java.util.Comparator;
+
+import static java.util.Comparator.*;
+
+public class Sort6 {
+
+	public static void main(String[] args) {
+		var words = Arrays.asList("B", "X", "S", null, "M", "F", "W", "O", null);
+		//words.sort(nullsFirst(reverseOrder()));
+		words.sort(Comparator.nullsFirst(Comparator.reverseOrder()));
+		System.out.println(words);
+	}
+
+}

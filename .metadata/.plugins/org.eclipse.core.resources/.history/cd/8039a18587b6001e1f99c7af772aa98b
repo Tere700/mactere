@@ -1,0 +1,12 @@
+package Filexxxit;
+
+import java.io.FileReader;
+
+public class FxxxR {
+
+	public static void main(String[] args) {
+		FileReader 
+
+	}
+
+}

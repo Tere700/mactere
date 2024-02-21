@@ -1,0 +1,17 @@
+package Chapter10;
+
+public class BufferedIO {
+	 
+
+	public static void main(String[] args) {
+		var thread = new Thread(() -> {
+			while(true) {
+				System.out.println("orz");
+			}
+			
+		});
+thread.setDaemon(true);
+thread.start();
+	}
+
+}

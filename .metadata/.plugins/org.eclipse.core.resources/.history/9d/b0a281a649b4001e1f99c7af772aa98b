@@ -1,0 +1,14 @@
+package CollectionMap;
+
+import java.util.*;
+
+public class Students3 {
+
+	public static void main(String[] args) {
+		HashSet students = new HashSet();
+		students.add(new Students3("Justin","B835031"));
+		
+	}
+	record Student3(String name ,String number) {};
+}
+

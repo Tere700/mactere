@@ -1,0 +1,12 @@
+package List;
+
+public class SimpleLinkedList {
+	private class Node {
+		Object o;
+		Node next;
+
+		Node(Object o) {
+			this.o = o;
+		}
+	}
+}

@@ -1,0 +1,18 @@
+package Chapter9;
+
+public class LoadSystemProp {
+
+	public static void main(String[] args) {
+//		var props = System.getProperties();
+//		System.out.println(props.getProperty("username"));
+//		System.out.println(props.getProperty("password"));
+		
+	      String username = System.getProperty("username");
+	        String password = System.getProperty("password");
+
+	        System.out.println("Username: " + username);
+	        System.out.println("Password: " + password);
+
+	}
+
+}

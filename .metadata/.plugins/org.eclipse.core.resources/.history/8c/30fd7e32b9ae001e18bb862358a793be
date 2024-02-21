@@ -1,0 +1,25 @@
+package Chapter9;
+
+import java.util.List;
+import java.util.TreeMap;
+
+public class IterableString {
+
+	public static void main(String[] args) {
+		var n = new TreeMap<String, String>();
+		n.put("AAA", "1");
+		n.put("BBB", "2");
+		n.put("CCC", "3");
+		n.put("DDD", "4");
+		n.put("EEE", "5");
+		IterableStringg.forEach(n);
+	}
+	static class IterableStringg{
+		static void forEach(Iterable<TreeMap<String, String>> iterable) {
+			for(var i : iterable) {
+				System.out.println(i);
+			}
+		}
+	}
+
+}

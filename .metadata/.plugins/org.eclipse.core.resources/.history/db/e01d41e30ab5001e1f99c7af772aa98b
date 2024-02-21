@@ -1,0 +1,25 @@
+package Filexxxit;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.nio.charset.StandardCharsets;
+
+public class Stringinput {
+
+	public static void main(String[] args) {
+		try {
+			FileInputStream fin = new FileInputStream("dir1/File4.txt");
+			byte[]buf = new byte[3];
+			int data;
+			while((data=fin.read(buf))!=-1){
+				System.out.println(new String(buf, 0, data, StandardCharsets.UTF_8));
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+
+	}
+
+}

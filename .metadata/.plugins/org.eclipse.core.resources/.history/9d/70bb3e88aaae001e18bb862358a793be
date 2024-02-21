@@ -1,0 +1,11 @@
+package Chapter9;
+
+public class Studentc {
+	String name;
+	public static void main(String[] args)  {	
+		var student = new Studentc();
+		System.out.println(student);
+		student.name = "Justin";
+		System.out.println(student);
+	}
+}

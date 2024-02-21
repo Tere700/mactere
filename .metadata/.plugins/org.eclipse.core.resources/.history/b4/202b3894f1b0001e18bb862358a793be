@@ -1,0 +1,26 @@
+package Chapter10;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+
+public class IOn {
+	public static void dump(InputStream src, OutputStream ots)
+			throws IOException{
+		try(src; ots){
+			var data = new byte[1024];
+			var length =0;
+			while((length= src.read(data))!=-1) {
+				ots.write(data, 0, length);
+			}
+		}
+		
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

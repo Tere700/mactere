@@ -1,0 +1,39 @@
+package Chapter9;
+
+import java.util.Deque;
+import java.util.LinkedList;
+
+public class Ecercisee {
+	public static void main(String[] args) {
+		String[] words = {"RADAR","WARTER START","MILK KLIM","RESERVERED","IWI"};
+		for(var word: words) {
+			if(isReversable(word)) {
+				System.out.println(word);
+			}
+		}
+	}
+	
+	public static boolean isReversable(String word) {
+		var CD = toDeque(word.toCharArray());
+		var C1 = CD.pollFirst();
+		var C2 = CD.pollLast();
+		if(C1!=null&&C2!=null) {
+			if(!C1.equals(C2)) {
+				return false;
+			}
+		}
+		return true;
+		
+	}
+
+	public static Deque<Character> toDeque (char []cs){
+		
+		var deque = new LinkedList<Character>();
+		for(var c : cs) {
+			deque.offer(c);
+		}
+		return deque;
+		
+	}
+
+}

@@ -1,0 +1,41 @@
+package Chapter9;
+
+import java.util.Iterator;
+
+public class IterableString implements Iterable<Character>{
+	
+	private String element;
+	
+	public IterableString (String element) {
+		this.element = element;
+	}
+
+	@Override
+	public Iterator<Character> iterator() {
+		return new InnterIterator();
+	}
+	
+	private class InnterIterator implements Iterator<Character>{
+		
+		int index;
+		
+		
+		@Override
+		public boolean hasNext() {
+			return index < element.length();
+		}
+
+		@Override
+		public Character next() {
+			var c = element.charAt(index);
+			index++;
+			return c;
+		}
+		
+		public void remove(){
+			throw new UnsupportedOperationException();
+		}
+		
+	}
+
+}

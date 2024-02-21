@@ -1,0 +1,13 @@
+package Filexxxit;
+
+import java.io.File;
+
+public class Filee {
+
+	public static void main(String[] args) {
+		File f1 = new File("/Users/teresa/Downloads/test1");
+		System.out.println(f1.exists());
+
+	}
+
+}

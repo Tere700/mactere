@@ -1,0 +1,74 @@
+package List;
+
+public class SimpleLinkedList {
+	public static void main(String[] args) {
+		SimpleLinkedList s = new SimpleLinkedList();
+		s.add("s");
+		s.add("aaaaaa");
+		System.out.println(s.first);
+	}
+
+	Node first;
+
+	private class Node {
+		Object o;
+		Node next;
+
+		Node(Object o) {
+			this.o = o;
+		}
+	}
+
+	private void add(Object o) {
+		Node node = new Node(o);
+		if (first == null) {
+			first = node;
+		} else {
+			append(node);
+		}
+
+	}
+
+	private void append(Node node) {
+		Node last = first;
+		while (last.next != null) {
+			last = last.next;
+		}
+		last.next = node;
+
+	}
+
+	private int size() {
+		int count = 0;
+		Node last = first;
+		while (last != null) {
+			last = last.next;
+			count++;
+		}
+		return count;
+	}
+
+	private Object get(int index) {
+		checksize(index);
+		return findElemOf(index);
+	}
+
+	private void checksize(int index) {
+		var size = size();
+		if (index >= size) {
+			throw new IndexOutOfBoundsException("Index : %d, Size : %d".formatted(index, size));
+		}
+
+	}
+
+	private Object findElemOf(int index) {
+		var last = first;
+		int count = 0;
+		while (count < index) {
+			last = last.next;
+			count++;
+		}
+		return last.o;
+	}
+
+}

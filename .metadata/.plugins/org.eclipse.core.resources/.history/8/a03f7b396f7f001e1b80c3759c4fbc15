@@ -1,0 +1,26 @@
+package Chapter4;
+
+public class pocker {
+
+	public static void main(String[] args) {
+		for (int k = 1; k < 5; k++) {
+			String m = "梅";
+			String o = "磚";
+			String p = "心";
+			String q = "桃";
+			for (int i = 1; i < 14; i++) {
+				if (k == 1) {
+					 System.out.print(m + i + " ");
+				} else if (k == 2) {
+					 System.out.print(o + i + " ");
+				}else if (k == 3) {
+					 System.out.print(p + i + " ");
+				}else if(k == 4){
+					 System.out.print(q + i + " ");
+				}
+			}
+		}
+
+	}
+
+}

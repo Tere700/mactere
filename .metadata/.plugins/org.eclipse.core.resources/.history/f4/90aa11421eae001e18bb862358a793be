@@ -1,0 +1,22 @@
+package Chapter9;
+
+import java.util.Collection;
+import java.util.Collections;
+
+public class UnMFC {
+	
+//	public static <T> Collection<T> unmodifiableCollection(Collection<? extends T> c) { //extends有可能是泛型或泛型的子類別
+//	    return Collections.unmodifiableCollection(c);
+//	}
+	
+	public static <T> Collection <T> unmodifiableCollection(Collection<? extends T> c){
+		return Collections.unmodifiableCollection(c);
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

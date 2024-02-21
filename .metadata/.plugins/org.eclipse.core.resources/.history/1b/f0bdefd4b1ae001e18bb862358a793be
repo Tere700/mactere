@@ -1,0 +1,9 @@
+package Chapter9;
+
+
+public record Rstudentf(String name) {
+	public static void main(String[] args) {
+		var students = new Rstudentf("Justin");
+		System.out.println(students);
+	}
+}

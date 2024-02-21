@@ -1,0 +1,33 @@
+package Chapter9;
+
+import java.util.Iterator;
+
+public class StingCharForEach implements Iterable<Character> {
+	
+	private String n;
+
+	public StingCharForEach(String n) {
+		this.n = n;
+	}
+	
+	@Override
+	public Iterator<Character> iterator() {
+		return new InnerIterator;
+	}
+	
+	static class InnerIterator implements Iterator<Character>{
+		private int index;
+		@Override
+		public boolean hasNext() {
+			return index< ;
+		}
+
+		@Override
+		public Character next() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+	}
+
+}

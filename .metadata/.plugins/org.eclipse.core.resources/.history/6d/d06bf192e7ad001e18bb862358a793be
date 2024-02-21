@@ -1,0 +1,17 @@
+package Chapter9;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class UnmodifiablexxXX {
+
+	public static void main(String[] args) {
+		var names = new ArrayList<String>();
+		names.add("Abby");
+		names.add("Bob");
+		names.add("Candy");
+		names.add("Dorris");
+		var Unmod = Collections.unmodifiableList(names);
+	}
+
+}

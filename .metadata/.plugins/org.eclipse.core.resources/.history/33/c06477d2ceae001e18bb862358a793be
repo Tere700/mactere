@@ -1,0 +1,12 @@
+package Chapter9;
+
+public class InterableS {
+
+	public static void main(String[] args) {
+		var n = new IterableString("Jassmine");
+		System.out.println(n.iterator());
+		
+
+	}
+
+}

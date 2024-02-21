@@ -1,0 +1,23 @@
+package Chapter9;
+
+import java.util.List;
+
+public class Studentc {
+	String name;
+	
+//	@Override
+//	public String toString() {
+//		return "Studentc [name=" + name + "]";
+//	}
+
+	public static void main(String[] args)  {	
+		var student = new Studentc();
+		System.out.println(student);
+		student.name = "Justin";
+		var students = List.of(student);
+		System.out.println(students.get(0));
+		student.name = "Monica";
+		System.out.println(students.get(0).name);
+
+	}
+}

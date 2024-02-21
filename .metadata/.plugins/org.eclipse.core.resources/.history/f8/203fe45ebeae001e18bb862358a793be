@@ -1,0 +1,28 @@
+package List;
+
+import java.util.List;
+import java.util.Scanner;
+
+public class Guest {
+
+	public static void main(String[] args) {
+
+	}
+
+	static void coentNameTo(List names) {
+		Scanner console = new Scanner(System.in);
+		while (true) {
+			String name = console.nextLine();
+			if (name.equals("quit")) {
+				break;
+			}
+			names.add(name);
+
+		}
+	}
+		static void printUpperCase(List names){
+			for(int i = 0 ;i<names.size();i++) {
+				System.out.println(names.get(i).toString());
+		}
+	}
+}

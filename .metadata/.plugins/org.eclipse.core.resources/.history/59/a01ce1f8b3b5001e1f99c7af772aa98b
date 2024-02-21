@@ -1,0 +1,24 @@
+package Filexxxit;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class File1writer {
+
+	public static void main(String[] args) {
+		
+		String mesg = "hey guys, my name is Teresa!";
+	
+		try {
+			FileWriter FW = new FileWriter("dir1/File2.txt");
+			FW.write(mesg);
+			FW.flush();
+			FW.close();
+		} catch (IOException e) {
+			System.out.println(e.toString());
+		}
+	
+
+	}
+
+}

@@ -1,0 +1,59 @@
+package Chapter8;
+
+public class CashCard {
+
+	private String number;
+	private int balance;
+	private int bonus;
+
+	CashCard(String number, int balance, int bonus) {
+		this.number = number;
+		this.balance = balance;
+		this.bonus = bonus;
+	}
+
+	void store(int money) { // 儲值時呼叫的方法
+		if (money > 0) {
+			this.balance += money;
+			if (money >= 1000) {
+				this.bonus++;
+			}
+		} else {
+			System.out.println("儲值是負的？你是來亂的嗎？");
+		}
+	}
+
+	void charge(int money) throws InsufficientException { // 扣款時呼叫的方法
+		assert money <=0 : "扣負數？這不是叫我儲值嗎？";
+		checkBalance(money);
+		this.balance-=money;
+		assert this.balance >=0 : "this.balance不能是負數";
+	}
+		
+	
+	private void checkBalance(int money)throws InsufficientException{
+		if(money>this.balance) {
+			throw new InsufficientException("錢不夠啦", this.balance);
+		}
+	}
+
+	int exchange(int bonus) { // 兌換紅利點數時呼叫的方法
+		if (bonus > 0) {
+			this.bonus -= bonus;
+		}
+		return this.bonus;
+	}
+
+	int getBalance() {
+		return balance;
+	}
+
+	int getBonus() {
+		return bonus;
+	}
+
+	String getNumber() {
+		return number;
+	}
+	
+}

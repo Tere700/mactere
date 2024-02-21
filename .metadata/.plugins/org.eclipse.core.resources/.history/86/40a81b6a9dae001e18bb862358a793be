@@ -1,0 +1,101 @@
+package Chapter9;
+
+import java.io.Serializable;
+import java.util.Collection;
+import java.util.Iterator;
+
+public class UnMFC {
+
+	//回傳Collection類別的值; 傳入Collection的值
+    public static <T> Collection<T> unmodifiableCollection(Collection<? extends T> c) {
+        return new UnmodifiableCollection<>(c);
+    }
+    //內部的類別
+    static class UnmodifiableCollection<E> implements Collection<E>, Serializable {
+        private static final long serialVersionUID = 1820017752578914078L;
+        final Collection<? extends E> c;
+
+        UnmodifiableCollection(Collection<? extends E> c) { //建構子(式)初始化成員變數;
+            if (c == null)
+                throw new NullPointerException();
+            this.c = c;
+        }
+
+        public boolean add(E e) {
+            throw new UnsupportedOperationException();
+        }
+
+        public boolean remove(Object o) {
+            throw new UnsupportedOperationException();
+        }
+
+        public boolean containsAll(Collection<?> coll) {
+            return c.containsAll(coll);
+        }
+
+		@Override
+		public int size() {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+
+		@Override
+		public boolean isEmpty() {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public boolean contains(Object o) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public Iterator<E> iterator() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public Object[] toArray() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public <T> T[] toArray(T[] a) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public boolean addAll(Collection<? extends E> c) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public boolean removeAll(Collection<?> c) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public boolean retainAll(Collection<?> c) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public void clear() {
+			// TODO Auto-generated method stub
+			
+		}
+
+    }
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+    }
+}

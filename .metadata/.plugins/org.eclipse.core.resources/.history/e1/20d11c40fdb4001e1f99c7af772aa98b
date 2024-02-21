@@ -1,0 +1,17 @@
+package Filexxxit;
+
+import java.io.File;
+
+public class brad42 {
+
+	public static void main(String[] args) {
+		File dir6 = new File("./dir3/dir6/dir8/dir9");
+		if(!dir6.exists()) {
+			dir6.mkdirs();
+		}else {
+			System.out.println("dir4 exists!");
+		}
+
+	}
+
+}

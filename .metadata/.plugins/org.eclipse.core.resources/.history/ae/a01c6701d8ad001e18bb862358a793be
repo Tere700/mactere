@@ -1,0 +1,23 @@
+package Chapter9;
+
+import java.util.TreeMap;
+
+public class MapTreeMap {
+
+	public static void main(String[] args) {
+		var TR = new TreeMap<String, String>();
+		TR.put("onee","AA");
+		TR.put("twoo","BB");
+		TR.put("threee","CC");
+		TR.put("twoo","BC");
+		TR.put("three002","CC");
+		TR.keySet().forEach(key -> System.out.println(key));
+		System.out.println("------------------------");
+		TR.values().forEach(value -> System.out.println(value));
+		System.out.println("------------------------");
+		System.out.println(TR.keySet());
+		System.out.println("------------------------");
+		System.out.println(TR.values());
+	}
+
+}

@@ -1,0 +1,23 @@
+package Chapter8;
+
+import java.io.IOException;
+
+import Chapter4.cashCard;
+
+public class test {
+
+	public static void main(String[] args)  {
+		CashCard c = new CashCard("1", -500, 1);
+
+				try {
+					c.charge(-200);
+				} catch (InsufficientException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+			System.out.println(c.getBalance());
+
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;tw.org.iii.test.Tung17&apos; to &apos;Tung17Re&apos;&#x0A;- Original project: &apos;Teresaaaaaaaapp&apos;&#x0A;- Original element: &apos;tw.org.iii.test.Tung17&apos;&#x0A;- Renamed element: &apos;tw.org.iii.test.Tung17Re&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Tung17&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;tw.org.iii.test{Tung17.java[Tung17" matchStrategy="1" name="Tung17Re" qualified="false" references="true" similarDeclarations="false" stamp="1691219190445" textual="false" version="1.0"/>
+</session>

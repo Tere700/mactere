@@ -1,0 +1,18 @@
+package Chapter8;
+
+import java.io.IOException;
+
+import Chapter4.cashCard;
+
+public class test {
+
+	public static void main(String[] args) throws InsufficientException1  {
+		CashCard c = new CashCard("1", 100, 1);
+
+		c.charge(200);
+
+			System.out.println(c.getBalance());
+
+	}
+
+}

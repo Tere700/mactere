@@ -1,0 +1,12 @@
+package CollectionMap;
+
+import java.util.Scanner;
+
+public class WordCount {
+
+	public static void main(String[] args) {
+		Scanner console = new Scanner(System.in);
+		System.out.println("");
+	}
+
+}

@@ -1,0 +1,37 @@
+package Chapter9;
+
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
+class Mucomparator implements Comparator<String>{
+
+	@Override
+	public int compare(String o1, String o2) {
+		return -o1.compareTo(o2);
+	}
+	
+}
+
+public class QueueComparator {
+
+	public static void main(String[] args) {
+
+		 PriorityQueue<String> PQ = new PriorityQueue<String>();
+		 PQ.add("TTT");
+		 PQ.add("YYY");
+		 PQ.add("NNN");
+		 PQ.add("AAA");
+		 PQ.add("HHH");
+		 System.out.println(PQ);
+
+		 PriorityQueue<String> PQ1 = new PriorityQueue<String>(new Mucomparator());
+		 PQ1.add("TTT");
+		 PQ1.add("YYY");
+		 PQ1.add("NNN");
+		 PQ1.add("AAA");
+		 PQ1.add("HHH");
+		 System.out.println(PQ1);
+		 
+	}
+
+}

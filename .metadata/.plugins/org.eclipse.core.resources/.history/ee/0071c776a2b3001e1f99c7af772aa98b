@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * 
+ */
+module JavaSE17 {
+	requires java.net.http;
+}

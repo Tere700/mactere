@@ -1,0 +1,5 @@
+package iii.brad.tw;
+
+public interface test23 {
+public Integer fq();
+}

@@ -1,0 +1,24 @@
+package Filexxxit;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+public class FxxxR {
+
+	public static void main(String[] args) {
+		try {
+			FileReader FR = new FileReader("dir1/101年臺北市公告土地現值劃分地價區段及最高最低地價.csv");
+			BufferedReader BF = new BufferedReader(FR);
+			String line;
+			while((line=BF.readLine())!=null) {
+				String[] row = line.split(",");
+				System.out.println(row[0]);
+				FR.close();
+			}
+		} catch (Exception e) {
+			System.out.println(e.toString());
+		}
+	
+	}
+
+}
